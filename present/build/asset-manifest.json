@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/present/static/css/main.c969e264.css",
+    "main.js": "/present/static/js/main.27d227e6.js",
+    "static/js/787.89bb5721.chunk.js": "/present/static/js/787.89bb5721.chunk.js",
+    "static/media/Quicksand-VariableFont_wght.ttf": "/present/static/media/Quicksand-VariableFont_wght.92e1d0f3321b53e20d2b.ttf",
+    "static/media/Quicksand-SemiBold.ttf": "/present/static/media/Quicksand-SemiBold.f36a86e2ff447dc869f0.ttf",
+    "static/media/Quicksand-Bold.ttf": "/present/static/media/Quicksand-Bold.4c3d23174e1f233b946d.ttf",
+    "static/media/AvenirNextLTPro-Regular.otf": "/present/static/media/AvenirNextLTPro-Regular.94f2f163d4b698242fef.otf",
+    "static/media/Ubuntu-Title.ttf": "/present/static/media/Ubuntu-Title.2b5febb9b8d936b29fed.ttf",
+    "static/media/web.pres": "/present/static/media/web.f70164c28cbc6c6e536a.pres",
+    "static/media/research.pres": "/present/static/media/research.aaf49996847c72f6bdca.pres",
+    "static/media/electrical.pres": "/present/static/media/electrical.b18931769fe84092885a.pres",
+    "static/media/applications.pres": "/present/static/media/applications.b409827cca5110fbc395.pres",
+    "index.html": "/present/index.html",
+    "main.c969e264.css.map": "/present/static/css/main.c969e264.css.map",
+    "main.27d227e6.js.map": "/present/static/js/main.27d227e6.js.map",
+    "787.89bb5721.chunk.js.map": "/present/static/js/787.89bb5721.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c969e264.css",
+    "static/js/main.27d227e6.js"
+  ]
+}

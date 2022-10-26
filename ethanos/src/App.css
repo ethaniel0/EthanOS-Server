@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --resize-wid: 3px;
+    --top-h: 0;
+    --bottom-h: calc(100% - var(--resize-wid));
+    --left-w: 0;
+    --right-w: calc(100% - var(--resize-wid));
+}
+
+.resize-area {
+    position: absolute;
+    background: transparent;
+    z-index: 5;
+    
+}
+.resize-area.top {
+    height: var(--resize-wid);
+    width: calc(100% - var(--resize-wid));
+    top: var(--top-h);
+    left: var(--resize-wid);
+    cursor: row-resize;
+}
+.resize-area.bottom {
+    height: var(--resize-wid);
+    width: calc(100% - var(--resize-wid));
+    top: var(--bottom-h);
+    left: var(--resize-wid);
+    cursor: row-resize;
+}
+.resize-area.left {
+    height: calc(100% - var(--resize-wid));
+    width: var(--resize-wid);
+    top: var(--resize-wid);
+    left: var(--left-w);
+    cursor: col-resize;
+}
+.resize-area.right {
+    height: calc(100% - var(--resize-wid));
+    width: var(--resize-wid);
+    top: var(--resize-wid);
+    left: var(--right-w);
+    cursor: col-resize;
+}
+.resize-area.tr {
+    height: calc(2 * var(--resize-wid));
+    width: calc(2 * var(--resize-wid));
+    top: var(--top-h);
+    left: var(--right-w);
+    cursor: nesw-resize;
+}
+.resize-area.tl {
+    height: calc(2 * var(--resize-wid));
+    width: calc(2 * var(--resize-wid));
+    top: var(--top-h);
+    left: var(--left-w);
+    cursor: nwse-resize;
+}
+.resize-area.br {
+    height: calc(2 * var(--resize-wid));
+    width: calc(2 * var(--resize-wid));
+    top: var(--bottom-h);
+    left: var(--right-w);
+    cursor: nwse-resize;
+}
+.resize-area.bl {
+    height: calc(2 * var(--resize-wid));
+    width: calc(2 * var(--resize-wid));
+    top: var(--bottom-h);
+    left: var(--left-w);
+    cursor: nesw-resize;
+}
+
+#desktop-black {
+    @apply w-4/5 h-full;
+    clip-path: polygon(27% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+#taskbar .apps, #taskbar .info {
+    background: rgb(90, 90, 90);
+}
+
+#apptray {
+    transition: bottom 0.5s ease;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    background: rgba(156, 163, 175, 0.6);
+}
+
+.window-circle {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    #desktop-black {
+        @apply w-full bottom-0;
+        height: 85%;
+        clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    #taskbar .apps2 {
+        background: rgba(194, 194, 194, 0.8);
+        border-radius: 1.2rem;
+        /* width: 90%; */
+        flex-basis: 90%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        /* position: absolute; */
+        border: none;
+        /* bottom: 1rem; */
+        left: 5%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #taskbar .info {
+        display: none;
+    }
+    #bkg-table {
+        height: calc(100% - 6.5rem);
+    }
+    #bkg-face {
+        padding-top: 40%;
+    }
+    #bkg-hi {
+        grid-row: span 2 / span 2;
+        align-self: center;
+        padding-top: 15%;
+        font-size: min(14vw, 3.75rem);
+    }
+    
+    .backg-desc, .backg-desc * {
+        transform: none !important;
+        font-size: min(7vw, 2.3rem);
+        left: unset !important;
+    }
+
+    .window {
+        width: 100% !important;
+        height: 100% !important;
+        border: none !important;
+        border-radius: 0 !important;
+    }
+    .window .navbar {
+        padding: 0;
+    }
+
+    .window-circle {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0;
+    }
+    
+}
