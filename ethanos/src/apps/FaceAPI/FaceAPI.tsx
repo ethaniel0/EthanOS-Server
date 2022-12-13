@@ -1,6 +1,6 @@
 import * as React from "react";
 import Application from "../../components/Application";
-import icon from './icon.svg';
+import icon from './icon.png';
 import Processes from "../../components/Processes";
 
 
@@ -19,7 +19,7 @@ export default class WH2022DC implements Application  {
         this.icon = icon;
         this.defaultSize = ['720px', '360px'];
         this.resizeable = true;
-        this.code = () => <iframe className="w-full h-full" src="/wh2022dc"></iframe>;
+        this.code = () => <iframe className="w-full h-full" src="https://face-2.ethanhorowitz.repl.co" allow="camera"></iframe>;
         this.lines = [];
         this.spawnPoint = [...Processes.windowSpawnPoint];
         this.menu = {

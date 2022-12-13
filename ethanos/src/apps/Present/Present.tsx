@@ -3,6 +3,9 @@ import Application from '../../components/Application';
 import icon from './assets/icon.svg';
 import icon2 from './assets/icon2.svg';
 import Processes from '../../components/Processes';
+// import LandingPage from './LandingPage';
+import PresentApp from './PresentApp';
+import './Present.css';
 
 class Present implements Application {
   name: string;
@@ -20,7 +23,9 @@ class Present implements Application {
   minHeight: number;
   menu: any;
 
+
   constructor(file?: any){
+    
     this.name = "Present";
     this.icon = icon;
     this.icon2 = icon2;
@@ -40,6 +45,15 @@ class Present implements Application {
         "Close Window": () => {}
       },
     };
+    
+    if (file){
+      this.file = file;
+      this.page = 1;
+    }
+    else {
+      this.file = null
+      this.page = 0;
+    }
     this.code = this.app;
   }
 
@@ -48,10 +62,8 @@ class Present implements Application {
   }
   
   app(size: number[], closeWindow: Function){
-    let path = '';
-    let appname = 'present';
     return (<>
-      <iframe src={path + '/' + appname} style={{width: '100%', height: '100%'}}></iframe>
+      <PresentApp size={size} file={this.file} />
     </>)
   }
 
