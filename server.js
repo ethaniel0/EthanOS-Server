@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+app.use('/wh2022dc', express.static(path.join(__dirname, 'wh2022dc', 'build')));
 app.use('/present', express.static(path.join(__dirname, 'present', 'build')));
 app.use('/', express.static(path.join(__dirname, 'ethanos', 'build')));
 
